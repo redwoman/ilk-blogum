@@ -6,11 +6,13 @@
 		<div>
 			<h1><a href="https://djangogirls.org/">Django Girls Web Sayfası</a></h1>
 		</div>
-		<div>
-			<p>Tarih: 12.12.2015, 15:52 </p>
-			<h2><a href="https://github.com/redwoman">github hesabımdan projelere ulaşabilirsiniz.</a></h2>
-			<p>Aman Tanrım!! Ölüyorum heycandan acayibim :). Bu benim ilk web uygulamam. Umarım bunu çok iyi geliştirebilirim.. </p>
-		</div>
+			{% for post in posts %}
+    <div>
+        <p>yayınlanma: {{ post.yayinlanma_tarihi }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+		{% endfor %}
 		<div>
 			<p>Tarih: 12.12.2015, 16:20</p>
 			<h2> <a href="https://google.com">Google.com</a></h2>
